@@ -39,6 +39,8 @@ namespace Shinjingi
 
         private void RetrieveFriction(Collision2D collision)
         {
+            if (collision.rigidbody == null)
+                return;
             _material = collision.rigidbody.sharedMaterial;
 
             Friction = 0;
