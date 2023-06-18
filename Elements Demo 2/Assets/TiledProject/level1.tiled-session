@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Stone.tsx",
+    "activeFile": "level_01.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -17,11 +17,11 @@
             "scaleInEditor": 3
         },
         "level_01.tmx": {
-            "scale": 0.33,
+            "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1136.3636363636365,
-                "y": -487.87878787878776
+                "x": -125.33333333333337,
+                "y": 321.99999999999994
             }
         }
     },
@@ -37,9 +37,9 @@
     ],
     "project": "level1.tiled-project",
     "recentFiles": [
-        "level_01.tmx",
+        "Stone.tsx",
         "grassTmp.tsx",
-        "Stone.tsx"
+        "level_01.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

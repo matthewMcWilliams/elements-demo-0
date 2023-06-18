@@ -41,7 +41,7 @@ namespace Shinjingi
             if (((Mathf.Sign(_velocity.x) != Mathf.Sign(oldVelocity.x)) || ((_velocity.x == 0) != (oldVelocity.x == 0))) && _controller.isPlayer)
             {
                 EventsManager.Instance.PlayerChangeDirection();
-                Debug.Log("SWITCH DIRECTION");
+                //Debug.Log("SWITCH DIRECTION");
             }
 
             _acceleration = _onGround ? _maxAcceleration : _maxAirAcceleration;

@@ -41,8 +41,12 @@ namespace Shinjingi
 
         private void FixedUpdate()
         {
+            var oldOnGround = _onGround;
             _onGround = _ground.OnGround;
             _velocity = _body.velocity;
+
+            if (_controller.isPlayer && !oldOnGround && _onGround)
+                EventsManager.Instance.PlayerJumpLand();
 
             if (_onGround && _body.velocity.y < 0.1f)
             {
@@ -89,6 +93,8 @@ namespace Shinjingi
         {
             if (_coyoteCounter > 0f || (_jumpPhase < _maxAirJumps && _isJumping))
             {
+                if (_controller.isPlayer)
+                    EventsManager.Instance.PlayerJumpLand();
                 if (_isJumping)
                 {
                     _jumpPhase += 1;
