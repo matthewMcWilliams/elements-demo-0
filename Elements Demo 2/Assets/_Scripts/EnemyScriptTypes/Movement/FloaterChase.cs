@@ -14,6 +14,11 @@ public class FloaterChase : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void OnDisable()
+    {
+        rb.velocity = Vector2.zero;
+    }
+
     private void Update()
     {
         if (chaseThis == null || !enabled)

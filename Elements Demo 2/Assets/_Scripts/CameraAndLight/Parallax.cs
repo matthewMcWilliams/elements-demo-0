@@ -14,7 +14,8 @@ public class Parallax : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPos = new Vector2((transform.position - cam.transform.position * parallaxEffectX - (transform.position-cam.transform.position)*parallaxEffectX).x, (transform.position - cam.transform.position * parallaxEffectY).y);
+        startPos = new Vector2((transform.position - cam.transform.position * parallaxEffectX - (transform.position-cam.transform.position)*parallaxEffectX).x,
+            (transform.position - cam.transform.position * parallaxEffectY - (transform.position - cam.transform.position) * parallaxEffectY).y);
         length = GetComponent<SpriteRenderer>().bounds.size.y;
     }
 
